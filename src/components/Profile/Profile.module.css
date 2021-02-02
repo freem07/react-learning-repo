@@ -1,10 +1,10 @@
-.content{
+/*.content{
     grid-area: content;
     background-color: red;
-  }
-.content img {
+  }*/
+/* .content img {
   display: block;
-}
+} */
 
 .profile_ava img {
   width: 100px;
