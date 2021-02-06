@@ -3,7 +3,15 @@ import MyPosts from './MyPosts/MyPosts';
 import classes from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => {
+
+/*     let posts = [
+        {id: 1, message: "Hi, how are you?", likesCount: 1,},
+        {id: 2, message: "It's my first posts", likesCount: 100500},
+
+    ]; */
+ 
+
     return (
         <div>
             <div>
@@ -11,7 +19,7 @@ const Profile = () => {
             </div>
 
             <ProfileInfo/>
-            <MyPosts/>
+            <MyPosts posts={props.posts}/>
         </div>
 
     );
