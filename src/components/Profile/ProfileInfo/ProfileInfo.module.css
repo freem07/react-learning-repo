@@ -1,0 +1,17 @@
+/*.content{
+    grid-area: content;
+    background-color: red;
+  }*/
+/* .content img {
+  display: block;
+} */
+
+.profile_ava img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.descriptionBlock {
+  padding: 10px;
+}

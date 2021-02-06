@@ -1,7 +1,15 @@
 .Nav {
     grid-area: nav;
     background-color: dodgerblue;
+    padding: 20px;
   }
 .item {
     color: white;
+}
+.item a {
+    color: white;
+    text-decoration: none;
+}
+.item a.activeLink {
+    color: red;
 }
