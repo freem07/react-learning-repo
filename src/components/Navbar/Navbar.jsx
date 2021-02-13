@@ -5,7 +5,7 @@ import FriendsOnNav from './FriendsOnNav/FriendsOnNav';
 
 const Navbar = (props) => {
 
-    let friendElement = props.state.sidebar.friendsOnSidebar
+    let friendElement = props.state.friendsOnSidebar
         .map(friend => <FriendsOnNav name={friend.name} id={friend.id} ava={friend.ava} /> );
 
     return (
