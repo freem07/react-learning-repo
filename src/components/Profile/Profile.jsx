@@ -5,12 +5,12 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
 
-/*     let posts = [
-        {id: 1, message: "Hi, how are you?", likesCount: 1,},
-        {id: 2, message: "It's my first posts", likesCount: 100500},
+    /*     let posts = [
+            {id: 1, message: "Hi, how are you?", likesCount: 1,},
+            {id: 2, message: "It's my first posts", likesCount: 100500},
+    
+        ]; */
 
-    ]; */
- 
 
     return (
         <div>
@@ -18,8 +18,12 @@ const Profile = (props) => {
                 <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" />
             </div>
 
-            <ProfileInfo/>
-            <MyPosts posts={props.state.posts} addPost={props.addPost} />
+            <ProfileInfo />
+            <MyPosts posts={props.state.posts}
+                     addPost={props.addPost}
+                     newPostText={props.state.newPostText}
+                     updateNewPostText={props.updateNewPostText}
+                      />
         </div>
 
     );
