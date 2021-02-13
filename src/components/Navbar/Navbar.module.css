@@ -13,3 +13,16 @@
 .item a.activeLink {
     color: red;
 }
+.friends {
+    margin-top: 10%;
+    color: white;
+}
+.friends a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.friends a.activeLink {
+    color: yellow;
+}

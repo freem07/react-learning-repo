@@ -1,31 +1,9 @@
-.dialogs{
-    display: grid;
-    grid-template-columns: 2fr 10fr;
-}
-.dialogsItems{
-    padding: 10px;
-    color: white;
-}
 
 .dialog{
     display: grid;
     grid-template-columns: 2fr 10fr;
+}
 
-}
-.messages{
-    padding: 10px;
-}
-.messages .message{
-    color: white;
-    padding: 5px;
-}
-.my_messages {
-    background-color:darkgreen;
-}
-.message_friend{
-    background-color:darkslategray;
-    text-align: right;
-}
 
 .avatarDialog {
     width: 50px;
@@ -39,7 +17,7 @@
     
 }
 .friend a{
-    
+    font-size: unset;
     color: black;
     text-decoration: none;
     padding: 10px;
