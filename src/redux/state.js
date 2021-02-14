@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () =>{
+    console.log('State changed');
+};
 
 let state = {
     profilePage: {
@@ -17,6 +19,9 @@ let state = {
             { id: 5, message: "Yo" },
             { id: 6, message: "Yo" },
         ],
+        
+        newMessageText: 'test message text',
+
         dialogsData: [
             { id: 1, name: "Dimych", ava: "https://f1.upet.com/A_r2u6uZhnxA_x.jpg"},
             { id: 2, name: "Nikolay", ava: "https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg"},
@@ -36,7 +41,7 @@ let state = {
 
     };
 
-export  let addPost = () => {
+export  const addPost = () => {
         let newPost = {
             id: 5,
             message: state.profilePage.newPostText,
@@ -48,10 +53,30 @@ export  let addPost = () => {
         rerenderEntireTree(state);
     };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
 
         state.profilePage.newPostText = newText;
         rerenderEntireTree(state);
 };
+
+export const addMessage = () => {
+       let newMessage = {
+           id: 7,
+           message: state.messagesPage.newMessageText,
+       };
+       state.messagesPage.messagesData.push(newMessage);
+       state.messagesPage.newMessageText = '';
+       rerenderEntireTree(state);
+};
+
+export const updateNewMessageText = (newText) => {
+
+        state.messagesPage.newMessageText = newText;
+        rerenderEntireTree(state);
+};
+
+export const subscriber = (observer) => {
+    rerenderEntireTree = observer;
+}; 
 
 export default state;
