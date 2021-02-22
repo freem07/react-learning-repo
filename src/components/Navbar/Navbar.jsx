@@ -5,8 +5,8 @@ import FriendsOnNav from './FriendsOnNav/FriendsOnNav';
 
 const Navbar = (props) => {
 
-    let friendElement = props.state.friendsOnSidebar
-        .map(friend => <FriendsOnNav name={friend.name} id={friend.id} ava={friend.ava} /> );
+    /* let friendElement = props.state.friendsOnSidebar
+        .map(friend => <FriendsOnNav name={friend.name} id={friend.id} ava={friend.ava} /> ); */
 
     return (
         <nav className={classes.Nav}>
@@ -28,7 +28,7 @@ const Navbar = (props) => {
             <div className={classes.friends}>
                 <NavLink to='/friends' activeClassName={classes.activeLink} >Friends :</NavLink>
                 <div>
-                    {friendElement}
+                   {/*  {friendElement} */}
                 </div>
             </div>
         </nav>
