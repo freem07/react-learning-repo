@@ -1,7 +1,14 @@
-.Header {
+.header {
     grid-area: header;
     background-color: darkcyan;
   }
-  .Header img{
+  .header img{
     width: 7%;
   }
+.loginBlock{
+  float: right;
+}
+.loginBlock a{
+  color: white;
+  text-decoration: none;
+}
