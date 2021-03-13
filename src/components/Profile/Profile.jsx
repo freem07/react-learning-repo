@@ -12,7 +12,7 @@ const Profile = (props) => {
                 <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" />
             </div>
 
-            <ProfileInfo />
+            <ProfileInfo profile={props.profile} />
             <MyPostsContainer/>
         </div>
 
