@@ -9,11 +9,11 @@ const Profile = (props) => {
 
     return (
         <div>
-            <div>
+           {/*  <div>
                 <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" />
-            </div>
+            </div> */}
 
-            <ProfileInfo profile={props.profile} />
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
             <MyPostsContainer/>
         </div>
 
