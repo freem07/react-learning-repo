@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD_MESSAGE'
-const UPDATE_NEW_MASSAGE_TEXT = 'UPDATE_NEW_MASSAGE_TEXT'
 
 let initialState = {
     messagesData: [
@@ -11,7 +10,6 @@ let initialState = {
         { id: 6, message: "Yo" },
     ],
 
-    newMessageText: 'test message text',
 
     dialogsData: [
         { id: 1, name: "Dimych", ava: "https://f1.upet.com/A_r2u6uZhnxA_x.jpg" },
@@ -29,31 +27,16 @@ const dialogsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_MESSAGE:
-            let body = state.newMessageText;
+            let body = action.messageText;
             return {
                 ...state,
-                newMessageText: '',
                 messagesData: [...state.messagesData, {id: 7, message: body} ]
             };
-
-         
-        
-        case UPDATE_NEW_MASSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText: action.newText,
-            }
-
         default:
             return state;
     };
 };
 
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
-export const updateNewMessageTextActionCreator = (text) => ({
-        type: UPDATE_NEW_MASSAGE_TEXT,
-        newText: text,
-});
-
+export const addMessageActionCreator = (messageText) => ({type: ADD_MESSAGE, messageText});
 
 export default dialogsReducer;
