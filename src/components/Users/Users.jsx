@@ -2,22 +2,24 @@ import React from 'react';
 import styles from './Users.module.css';
 import userPhoto from './../../assets/images/def-ava.png';
 import { NavLink } from 'react-router-dom';
+import { createPages } from './pageCreator';
 
 const Users = (props) => {
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
     let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
+/*     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
         if (pages.length >= 30)
             break;
-    }
+    } */
+    createPages(pages,pagesCount,props.currentPage)
 
     return <div>
         <div>
             {pages.map(p => {
                 return <span className={props.currentPage === p && styles.selectedPage}
-                    onClick={(e) => { props.onPageChanged(p) }} >{p}</span>
+                    onClick={(e) => { props.onPageChanged(p) }} >{" "+ p +" "}</span>
             })}
 
 
