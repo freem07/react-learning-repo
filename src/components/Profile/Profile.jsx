@@ -5,7 +5,7 @@ import classes from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-    if(!props.isAuth) return <Redirect to={'/login'} />
+    /* if(!props.isAuth) return <Redirect to={'/login'} /> */
 
     return (
         <div>
