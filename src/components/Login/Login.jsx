@@ -5,6 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 import { login, logout } from '../../redux/auth-reducer';
 import { required } from '../../utils/validators/validators';
 import { Input } from '../common/FormControl/FormControl';
+import styles from './../common/FormControl/FormControl.module.css'
 
 
 
@@ -33,6 +34,9 @@ const LoginForm = (props) =>{
                  
                   /> Remember Me
             </div>
+            {props.error && <div className={styles.formSumError} >
+                {props.error}
+            </div>}
             <div>
                 <button>Log in</button>
             </div>
