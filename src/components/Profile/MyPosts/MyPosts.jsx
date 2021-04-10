@@ -9,7 +9,7 @@ import Post from './Post/Post';
 const maxLength10 = maxLengthCreator(10)
 
 const MyPosts = (props) => {
-    
+    console.log("Render")
     let postsElement = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount} key={p.id} /> );
 
     let AddPost = (values) =>{
